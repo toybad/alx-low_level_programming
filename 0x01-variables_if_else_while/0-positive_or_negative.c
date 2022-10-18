@@ -1,23 +1,21 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include <unistd.h>
+#include "main.h"
 
 /**
- * main - print a random num
- *
- * Return: 0
+ * main - Check description
+ * Description: it prints the word _putchar, followed by a new line
+ * Return: ALways 0
  */
 int main(void)
 {
-	int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
-	else
-		printf("%d is zero\n", n);
+	char word[8] = "_putchar";
+	int i;
+
+	for (i = 0; i < 8; i++)
+		_putchar(word[i]);
+	_putchar('\n');
+
 	return (0);
-}
+	}
+
